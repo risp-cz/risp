@@ -1,0 +1,9 @@
+config:
+  pathPidFile: <PID_FILE_PATH>
+  pathLogFile: <LOG_FILE_PATH>
+  pathData: <DATA_PATH>
+  grpc:
+    host: <GRPC_HOST>
+    port: <GRPC_PORT>
+  repl:
+    prompt: <REPL_PROMPT>

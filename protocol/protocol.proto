@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+option go_package = "risp/protocol";
+
+package protocol;
+
+import "protocol/error.proto";
+import "protocol/context.proto";
+import "protocol/source.proto";
+import "protocol/resource.proto";
+import "protocol/query.proto";
+
+service Risp {
+    rpc Execute (ExecuteRequest) returns (ExecuteResponse) {}
+    rpc Query (QueryRequest) returns (QueryResponse) {}
+
+    rpc IndexURI (IndexURIRequest) returns (IndexURIResponse) {}
+
+    rpc GetContext (GetContextRequest) returns (GetContextResponse) {}
+    rpc GetContexts (GetContextsRequest) returns (GetContextsResponse) {}
+    rpc GetSource (GetSourceRequest) returns (GetSourceResponse) {}
+    rpc GetSources (GetSourcesRequest) returns (GetSourcesResponse) {}
+    rpc GetResources (GetResourcesRequest) returns (GetResourcesResponse) {}
+
+    rpc CreateContext (CreateContextRequest) returns (CreateContextResponse) {}
+
+    rpc ExportContexts (ExportContextsRequest) returns (ExportContextsResponse) {}
+}
+
+message ExecuteRequest {
+    string context_id = 1;
+    string command = 2;
+}
+
+message ExecuteResponse {
+    Error error = 1;
+}
+
+message IndexURIRequest {
+    string context_id = 1;
+    string uri = 2;
+}
+
+message IndexURIResponse {
+    Error error = 1;
+
+    Source source = 2;
+}

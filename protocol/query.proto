@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option go_package = "risp/protocol";
+
+package protocol;
+
+import "protocol/error.proto";
+import "protocol/resource.proto";
+
+enum QueryHighlightStyle {
+    HTML = 0;
+    ASCI = 1;
+}
+
+message QueryHighlight {
+    string key = 1;
+    repeated string values = 2;
+}
+
+message QueryHit {
+    float score = 1;
+    Resource resource = 2;
+    repeated QueryHighlight highlights = 3;
+}
+
+message QueryRequest {
+    string context_id = 1;
+    string value = 2;
+    optional QueryHighlightStyle highlight_style = 3;
+}
+
+message QueryResponse {
+    Error error = 1;
+
+    float max_score = 2;
+    int64 edges_total = 3;
+    repeated QueryHit edges = 4;
+}

@@ -1,0 +1,18 @@
+
+.search-screen {
+    margin: 0 8px;
+}
+
+.search-screen-title {
+    margin-top: 20vh;
+    text-align: center;
+    font-size: 3.6rem;
+    text-shadow: 0 0 16px rgba(0,0,0,.61);
+    /* color: #fff; */
+}
+
+.search-screen-input {
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top: 4vh;
+}

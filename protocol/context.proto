@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+option go_package = "risp/protocol";
+
+package protocol;
+
+import "protocol/error.proto";
+
+message Context {
+    string id = 1;
+    string name = 2;
+    bool is_default = 3;
+}
+
+message GetContextRequest {
+    optional string context_id = 1;
+}
+
+message GetContextResponse {
+    Error error = 1;
+
+    Context context = 2;
+}
+
+message GetContextsRequest {
+    // int64 limit = 1;
+    // int64 offset = 2;
+}
+
+message GetContextsResponse {
+    Error error = 1;
+
+    int64 contexts_total = 2;
+    repeated Context contexts = 3;
+}
+
+message CreateContextRequest {
+    string name = 1;
+}
+
+message CreateContextResponse {
+    Error error = 1;
+
+    Context context = 2;
+}
+
+message ExportContextsRequest {
+    string output_path = 1;
+    repeated string context_ids = 2;
+}
+
+message ExportContextsResponse {
+    Error error = 1;
+}

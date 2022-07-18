@@ -1,0 +1,75 @@
+{
+    "risp": {
+        "contexts": "{count, plural, =0 {kontexty} =1 {kontext} other {kontexty}}",
+        "sources": "{count, plural, =0 {prameny} =1 {pramen} other {prameny}}",
+        "resources": "{count, plural, =0 {zdroje} =1 {zdroj} other {zdroj}}",
+
+        "Context_zero": "Kontexty",
+        "Context_one": "Kontext",
+        "Context_interval": "(2-4)[Kontexty];(5-inf)[Kontextů];",
+        
+        "Source_zero": "Prameny",
+        "Source_one": "Pramen",
+        "Source_interval": "(2-4)[Prameny];(5-inf)[Pramenů];",
+        
+        "Resource_zero": "Zdroje",
+        "Resource_one": "Zdroj",
+        "Resource_interval": "(2-4)[Zdroje];(5-inf)[Zdrojů];",
+
+        "SelectionCount": "{count, plural, =0 {Žádné {{name}} vybrané} =1 {# {{name}} vybraný} other {# {{name}} vybrané}}",
+        "new": "nový",
+        "New": "Nový",
+        "delete": "odstranit",
+        "Delete": "Odstranit",
+        "export": "exportovat",
+        "Export": "Exportovat",
+        "close": "zavřít",
+        "Close": "Zavřít",
+        "save": "uložit",
+        "Save": "Uložit",
+        "CompactView": "Kompaktní zobrazení",
+        "id": "ID",
+        "uri": "URI",
+        "urn": "URN",
+        "CanonicalURI": "Kanonická URI",
+        "default": "výchozí",
+        "Default": "Výchozí",
+        "name": "název",
+        "Name": "Název",
+        "type": "typ",
+        "Type": "Typ",
+        "adapter": "adaptér",
+        "Adapter": "Adaptér",
+        "IndexURI": "Indexovat URI"
+    },
+    "nouns": {
+    },
+    "verbs": {
+        "index": "indexovat",
+        "Index": "Indexovat",
+        "Search": "Hledat",
+        "SearchFor": "Hledat"
+    },
+    "screen.contexts": {
+    },
+    "screen.sources": {
+        "ImportSources": "Importovat prameny",
+        "ExportSources": "Exportovat prameny"
+    },
+    "screen.resources": {
+        "SourceCanonicalURI": "Kanonická URI pramenu"
+    },
+    "screen.search": {
+        "ShowingResultsFor": "Zobrazeny výsledky hledání '{{query}}'",
+        "total": "{total, plural, =1 {Celkem # výsledek} other {Celkem # výsledků}}",
+        "NoMatch": "Žádný výsledek"
+    },
+    "modal.create_context": {
+        "title": "Vytvořit nový kontext",
+        "PlaceholderName": "Zadejte jméno kontextu"
+    },
+    "modal.index_uri": {
+        "title": "Indexovat URI",
+        "PlaceholderURI": "Zadejte URI pramene"
+    }
+}

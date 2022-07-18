@@ -1,0 +1,75 @@
+{
+    "risp": {
+        "contexts": "{count, plural, =0 {contexts} =1 {context} other {contexts}}",
+        "sources": "{count, plural, =0 {sources} =1 {source} other {sources}}",
+        "resources": "{count, plural, =0 {resources} =1 {resource} other {resources}}",
+
+        "Context_zero": "Contexts",
+        "Context_one": "Context",
+        "Context_interval": "(2-inf)[Contexts];",
+
+        "Source_zero": "Sources",
+        "Source_one": "Source",
+        "Source_interval": "(2-inf)[Sources];",
+        
+        "Resource_zero": "Resources",
+        "Resource_one": "Resource",
+        "Resource_interval": "(2-inf)[Resources];",
+
+        "SelectionCount": "{count, plural, =0 {No {{name}} selected} other {# {{name}} selected}}",
+        "new": "new",
+        "New": "New",
+        "delete": "delete",
+        "Delete": "Delete",
+        "export": "export",
+        "Export": "Export",
+        "close": "close",
+        "Close": "Close",
+        "save": "save",
+        "Save": "Save",
+        "CompactView": "Compact view",
+        "id": "ID",
+        "uri": "URI",
+        "urn": "URN",
+        "CanonicalURI": "Canonical URI",
+        "default": "default",
+        "Default": "Default",
+        "name": "name",
+        "Name": "Name",
+        "type": "type",
+        "Type": "Type",
+        "adapter": "adapter",
+        "Adapter": "Adapter",
+        "IndexURI": "Index URI"
+    },
+    "nouns": {
+    },
+    "verbs": {
+        "index": "index",
+        "Index": "Index",
+        "Search": "Search",
+        "SearchFor": "Search for"
+    },
+    "screen.contexts": {
+    },
+    "screen.sources": {
+        "ImportSources": "Import sources",
+        "ExportSources": "Export sources"
+    },
+    "screen.resources": {
+        "SourceCanonicalURI": "Source canonical URI"
+    },
+    "screen.search": {
+        "ShowingResultsFor": "Showing results for '{{query}}'",
+        "total": "{total, plural, =1 {Total # match} other {Total # matches}}",
+        "NoMatch": "No match"
+    },
+    "modal.create_context": {
+        "title": "Create new context",
+        "PlaceholderName": "Enter context name"
+    },
+    "modal.index_uri": {
+        "title": "Index URI",
+        "PlaceholderURI": "Enter source URI"
+    }
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "risp/protocol";
+
+package protocol;
+
+message Error {
+    int64 code = 1;
+    optional string message = 2;
+}

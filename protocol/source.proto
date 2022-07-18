@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+option go_package = "risp/protocol";
+
+package protocol;
+
+import "protocol/error.proto";
+
+enum AdapterType {
+    FS = 0;
+    WEB = 1;
+}
+
+message AdapterDataFS {
+    string path = 1;
+    bool is_dir = 2;
+    bool is_dot = 3;
+}
+
+message AdapterDataWeb {
+    string scheme = 1;
+    string host = 2;
+    string user = 3;
+}
+
+message Source {
+    string context_id = 1;
+    string id = 2;
+    string urn = 3;
+    string canonical_uri = 4;
+    AdapterType adapter_type = 5;
+    oneof adapter_data {
+        AdapterDataFS fs = 6;
+        AdapterDataWeb web = 7;
+    }
+}
+
+message GetSourceRequest {
+    string id = 1;
+}
+
+message GetSourceResponse {
+    Error error = 1;
+
+    Source source = 2;
+}
+
+message GetSourcesRequest {
+    string context_id = 1;
+    int64 limit = 2;
+    int64 offset = 3;
+}
+
+message GetSourcesResponse {
+    Error error = 1;
+
+    int64 sources_total = 2;
+    repeated Source sources = 3;
+}

@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option go_package = "risp/protocol";
+
+package protocol;
+
+import "protocol/error.proto";
+
+enum ResourceType {
+    FS_FILE = 0;
+    WEB_PAGE = 1;
+}
+
+message Resource {
+    string context_id = 1;
+    string source_urn = 2;
+    string source_canonical_uri = 3;
+    string id = 4;
+    string urn = 5;
+    string canonical_uri = 6;
+    ResourceType type = 7;
+    string data_json = 8;
+}
+
+message GetResourcesRequest {
+    string context_id = 1;
+    int64 limit = 2;
+    int64 offset = 3;
+}
+
+message GetResourcesResponse {
+    Error error = 1;
+
+    int64 resources_total = 2;
+    repeated Resource resources = 3;
+}
